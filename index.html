@@ -1,0 +1,92 @@
+<!-- index.html
+     MIT Licence — (c) 2020-Present is-a.dev, (c) Clove Twilight -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- HTML Meta Tags -->
+        <title>meowed-at.me - Free subdomains</title>
+        <meta name="description" content="Get your own free .meowed-at.me subdomain" />
+        <meta name="theme-color" content="#0b0a0d" />
+
+        <!-- Open Graph / Twitter -->
+        <meta property="og:url" content="https://meowed-at.me/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="meowed-at.me" />
+        <meta property="og:description" content="Get your own free .meowed-at.me subdomain" />
+        <meta property="og:image" content="https://meowed-at.me/assets/og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/assets/collar.svg" />
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" />
+        <link rel="stylesheet" href="/styles/main.css" />
+    </head>
+
+    <body>
+        <main>
+            <h1 class="banner"><img src="/assets/meowed-at-me-banner.png" alt="meowed-at.me" width="1500" height="500" /></h1>
+            <h3>Grab your own adorable <span>.meowed-at.me</span> subdomain.</h3>
+
+            <p>
+                To register your own subdomain, visit the
+                <a href="https://github.com/meowed-at-me/register" target="_blank" rel="noopener">meowed-at-me/register</a>
+                repository on GitHub and follow the provided instructions.
+            </p>
+
+            <h2>Check Subdomain Availability</h2>
+            <p>Enter a subdomain below to check if it is available.</p>
+
+            <div class="search-cntnr">
+                <input id="search-domain" type="text" aria-label="Subdomain to check" disabled />
+            </div>
+
+            <div aria-live="polite">
+                <div id="result-card" class="hidden result-card">
+                    <div class="user-infos">
+                        <img id="user-avatar" class="user-avatar" alt="" draggable="false" />
+                        <span>
+                            This subdomain is owned by
+                            <a id="user-gh" target="_blank" rel="noopener"><span id="user-gh-name"></span></a>.
+                        </span>
+                    </div>
+                </div>
+
+                <p id="result-none" class="hidden">
+                    This subdomain is available,
+                    <a href="https://github.com/meowed-at-me/register" target="_blank" rel="noopener">click here</a>
+                    to learn how to register it!
+                </p>
+                <p id="result-error" class="hidden">An error occurred whilst processing your request, please try again.</p>
+                <p id="result-reserved" class="hidden">Unfortunately that subdomain is reserved, please try a different one.</p>
+            </div>
+
+            <h2>Important Links</h2>
+            <ul>
+                <li><a href="/terms/">Terms of Service</a></li>
+                <li><a href="https://github.com/meowed-at-me/register">GitHub</a></li>
+            </ul>
+
+            <h2>Report Abuse</h2>
+            <p>
+                If you suspect that a subdomain is abusing the service, please
+                <a href="https://github.com/meowed-at-me/register/issues/new?title=Report+abuse" target="_blank" rel="noopener">report it here</a>.
+            </p>
+
+            <p>
+                &copy; <span id="year">2026</span> meowed-at.me
+                <br />
+                A project by <a href="https://github.com/doughmination">Doughmination</a>.
+                Based on the <a href="https://github.com/is-a-dev/is-a-dev.github.io">is-a.dev website</a>.
+            </p>
+        </main>
+
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+        <script src="/scripts/subdomain-availability.js"></script>
+    </body>
+</html>

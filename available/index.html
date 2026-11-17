@@ -1,0 +1,36 @@
+<!-- available/index.html
+     MIT Licence — (c) 2020-Present is-a.dev, (c) Clove Twilight -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Available Domain | meowed-at.me</title>
+
+        <link rel="icon" type="image/svg+xml" href="/assets/collar.svg" />
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/secondary.css" />
+    </head>
+
+    <body>
+        <h1>Available Domain</h1>
+        <p>The subdomain <span id="subdomain"></span>.meowed-at.me is available for registration!</p>
+
+        <a href="/">Return to the homepage to learn more.</a>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const subdomain = params.get("d");
+
+            if (subdomain) {
+                document.getElementById("subdomain").textContent = subdomain;
+            } else {
+                window.location = "/";
+            }
+        </script>
+    </body>
+</html>

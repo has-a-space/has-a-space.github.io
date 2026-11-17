@@ -1,0 +1,207 @@
+/* styles/main.css
+ * MIT Licence — (c) 2020-Present is-a.dev, (c) Clove Twilight
+ */
+
+/* Palette seeded from doughmination.gay theme.css */
+:root {
+    --bg: #0b0a0d;
+    --raised: rgb(255 255 255 / 3.5%);
+    --line: rgb(255 255 255 / 9%);
+    --text: #ece9ef;
+    --muted: #a49eab;
+    --accent: #eb459e;
+    --accent-hover: #f37bbb;
+    --accent-dim: rgb(235 69 158 / 14%);
+
+    --font-display: "Gochi Hand", cursive;
+    --font-body: "IBM Plex Sans", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+main {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 900px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}
+
+/* Paragraphs */
+main p {
+    padding-left: 15px;
+    border-left: 3px solid var(--accent);
+    margin-bottom: 1em;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    background: var(--accent-dim);
+    border: 1px solid var(--line);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 0 0 20px;
+}
+
+h1.banner {
+    padding: 0;
+    overflow: hidden;
+    background: none;
+}
+
+h1.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 span,
+h3 span {
+    color: var(--accent);
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+code {
+    font-family: var(--font-mono);
+}
+
+/* Search */
+input {
+    font-family: var(--font-mono);
+    width: 100%;
+    color: var(--text);
+    font-size: 1.2rem;
+    padding: 10px 12px;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg);
+    transition: border-color 0.2s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+input::placeholder {
+    color: var(--muted);
+}
+
+.search-cntnr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.result-card {
+    padding: 0.75rem;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    background: var(--accent-dim);
+    margin-top: 1rem;
+}
+
+.user-infos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    background-color: var(--accent-dim);
+    width: 64px;
+    height: 64px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Drop body padding on phones */
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+}
+
+/* Selection */
+::selection {
+    color: var(--bg);
+    background: var(--accent);
+}

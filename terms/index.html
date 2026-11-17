@@ -1,0 +1,46 @@
+<!-- terms/index.html
+     MIT Licence — (c) 2020-Present is-a.dev, (c) Clove Twilight -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Terms of Service | meowed-at.me</title>
+        <meta name="description" content="By using our service, you agree to the following Terms of Service." />
+
+        <link rel="icon" type="image/svg+xml" href="/assets/collar.svg" />
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/secondary.css" />
+
+        <script src="/scripts/marked.min.js"></script>
+    </head>
+
+    <body>
+        <div class="markdown-body" id="terms-of-service"><p>Loading...</p></div>
+
+        <script>
+            const markdownUrl = "https://raw.githubusercontent.com/meowed-at-me/register/main/TERMS_OF_SERVICE.md";
+            const container = document.getElementById("terms-of-service");
+
+            fetch(markdownUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Error fetching the file: ${response.statusText}`);
+                    }
+
+                    return response.text();
+                })
+                .then((markdown) => {
+                    container.innerHTML = marked.parse(markdown);
+                })
+                .catch((error) => {
+                    console.error(error);
+                    container.innerHTML = "<h3>Could not load the Terms of Service. Please try again later.</h3>";
+                });
+        </script>
+    </body>
+</html>
