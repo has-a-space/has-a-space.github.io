@@ -20,7 +20,7 @@ const userGitHubName = document.getElementById("user-gh-name");
 
 async function fetchReservedDomains() {
     try {
-        const response = await fetch(`${REGISTER_RAW}/util/reserved.json`);
+        const response = await fetch(`${REGISTER_RAW}/json/reserved.json`);
 
         // A missing reserved list just means nothing is reserved yet
         if (!response.ok && response.status !== 404) {
