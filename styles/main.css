@@ -9,9 +9,9 @@
     --line: rgb(255 255 255 / 9%);
     --text: #ece9ef;
     --muted: #a49eab;
-    --accent: #eb459e;
-    --accent-hover: #f37bbb;
-    --accent-dim: rgb(235 69 158 / 14%);
+    --accent: #22c55e;
+    --accent-hover: #4ade80;
+    --accent-dim: rgb(34 197 94 / 14%);
 
     --font-display: "Gochi Hand", cursive;
     --font-body: "IBM Plex Sans", system-ui, sans-serif;

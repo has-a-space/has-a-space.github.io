@@ -1,8 +1,8 @@
-# meowed-at.me Website
+# has-a.space Website
 
-The website for the meowed-at.me subdomain service.
+The website for the has-a.space subdomain service.
 
-Register a subdomain at [meowed-at-me/register](https://github.com/meowed-at-me/register).
+Register a subdomain at [has-a-space/register](https://github.com/has-a-space/register).
 
 ---
 

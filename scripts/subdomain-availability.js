@@ -2,7 +2,7 @@
  * MIT Licence — (c) 2020-Present is-a.dev, (c) Clove Twilight
  */
 
-const REGISTER_RAW = "https://raw.githubusercontent.com/meowed-at-me/register/main";
+const REGISTER_RAW = "https://raw.githubusercontent.com/has-a-space/register/main";
 const DOMAIN_PATTERN = /^[a-zA-Z0-9_][a-zA-Z0-9.-]*/;
 
 let isSearching = false;
